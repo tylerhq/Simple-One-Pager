@@ -70,19 +70,6 @@
 		color: rgba(255,255,255,.7);
 		font-size: 1em;
 	}
-	#section2{
-		background: #e96443;  /* fallback for old browsers */
-		background: -webkit-linear-gradient(to bottom, #904e95, #e96443);  /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(to bottom, #904e95, #e96443); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		padding: 6% 0 0 0;
-	}
-	#section3{
-		background-image: url(imgs/bg4.jpg);
-		padding: 6% 0 0 0;
-	}
-	#section3 h1{
-		color: #000;
-	}
 
 
 	/*Section 2
@@ -174,16 +161,22 @@
 		#home-section > section > h1 > span {
 			display: inline-block;
 			text-align: left;
-			font-size: calc(80vh/4);
+			font-size: 20vh;
 			line-height: 0.8em;
+		}
+		#home-section > section > p {
+		    font-size: 3.8vh;
 		}
 	}
 	@media all and (height: 100vmax) {
 		#home-section > section > h1 > span {
 			display: inline-block;
 			text-align: left;
-			font-size: calc(100vw/4);
+			font-size: 25vw;
 			line-height: 0.8em;
+		}
+		#home-section > section > p {
+		    font-size:4.7vw;
 		}
 	}
 
@@ -281,7 +274,9 @@
             transform: translateY(4.8rem) scale(0.5);
   }
 }
-
+video::-webkit-media-controls {
+  display:none !important;
+}
 	</style>
 
 	<!--[if IE]>
@@ -294,7 +289,18 @@
 
 
 <div id="fullpage">
-	<div class="section " id="home-section">
+	<div class="section " id="home-section" style="position:relative; overflow: hidden; ">
+		<video data-ignore data-keepplaying autoplay muted loop id="myVideo" style="
+			background: #000;
+			bottom: 0;
+			left:0;
+			min-height: 100%;
+			min-width: 100%;
+			position: absolute;
+			z-index:0;
+		">
+		  <source src="./assets/Dark%20-%2018392.mp4" type="video/mp4">
+		</video>
 		<section>
 			<h1><span>NOT<br>FOND<br>OF<br>RULES</span></h1>
 			<p>A Digital Agency for the Modern Web<br></p>
