@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>CRO, Design, Dev : Not Font of Rules</title>
+	<meta name="author" content="Not Fond of Rules, Tyler Conover" />
+	<meta name="description" content="Let's not make this difficult. Use best practices and leverage open source to make the web a better place." />
+	<meta name="keywords"  content="CRO,Design,Dev,Los Angeles,Tyler,Conover,notfondofrules,not fond of rules,web development,open source" />
+	<meta name="Resource-type" content="Document" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous" />	<link rel="stylesheet" type="text/css" href="examples.css" />
+	<style>
+	/*Full Screen Overrides*/
+	#fp-nav ul li a span, #menu-line, .fp-slidesNav ul li a span {
+	  background: #fff;
+	}
+	#fp-nav.fp-right {
+	  right: 7px;
+	}
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+
+	/* Backgrounds will cover all the section
+	* --------------------------------------- */
+	#home-section,
+	#rules-section,
+	#contact-section,
+	#offerings-section
+    {
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	/* Defining each sectino background and styles
+	* --------------------------------------- */
+	#home-section{
+		background: #e96443;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to bottom, #904e95, #e96443);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to bottom, #904e95, #e96443); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	}
+	#home-section section, #rules-section section, #offerings-section section, #contact-section section {
+		position: relative;
+		top: 50vh;
+		transform: translateY(-50%);
+	}
+	#home-section h1{
+		display:inline-block;
+		position: relative;
+		font-size:7vh;
+		font-weight:700;
+		letter-spacing: -0.07em;
+	}
+	#home-section p {
+		color: rgba(255,255,255,.7);
+		font-size: 1em;
+	}
+	#section2{
+		background: #e96443;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to bottom, #904e95, #e96443);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to bottom, #904e95, #e96443); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		padding: 6% 0 0 0;
+	}
+	#section3{
+		background-image: url(imgs/bg4.jpg);
+		padding: 6% 0 0 0;
+	}
+	#section3 h1{
+		color: #000;
+	}
+
+
+	/*Section 2
+	* --------------------------------------- */
+	#rules-section{
+		background: #000;
+	}
+	#rules-section h2 {
+		font-size: calc(100vh/20*1.6);
+		color: #fff;
+		font-weight: 700;
+		line-height: 0.8em;
+	}
+	#rules-section ol {
+		font-size: calc(100vh/30);
+		color: #fff;
+		line-height: 3em;
+		list-type: numbered;
+		text-align:left;
+		padding:1em 1em 0;
+		display:inline-block;
+		margin-left:-1em;
+	}
+	#rules-section ol {
+		list-style: none;
+		counter-reset: li
+	}
+	#rules-section ol li::before {
+		content: counter(li) ".";
+		color: #eee;
+  		display: inline-block;
+  		margin-right: 0.5em;
+  		width:2em;
+  		text-align:right;
+		font-weight:100;
+  	}
+  	#rules-section li {counter-increment: li}
+
+ 	/*Section 3
+	* --------------------------------------- */
+	#offerings-section{
+		background: #fff;
+	}
+	#offerings-section h2 {
+		font-size: calc(100vh/20*1.6);
+		color: #000;
+		font-weight: 700;
+		line-height: 0.8em;
+	}
+	#offerings-section ul {
+		font-size: calc(100vh/30);
+		color: #000;
+		line-height: 3em;
+		list-type: numbered;
+		text-align:left;
+		padding:1em 1em 0;
+		display:inline-block;
+		margin-left:-1em;
+	}
+	#offerings-section ul {
+		list-style: none;
+		counter-reset: li
+	}
+	#offerings-section ul li::before {
+		content: counter(li) ".";
+		color: #111;
+  		display: inline-block;
+  		margin-right: 0.5em;
+  		width:2em;
+  		text-align:right;
+		font-weight:100;
+  	}
+  	#offerings-section li {counter-increment: li}
+
+	/*Section 4
+	* --------------------------------------- */
+	#contact-section{
+		background: #fff;
+	}
+	#contact-section h2 {
+		font-size: calc(100vh/20*1.6);
+		color: #000;
+		font-weight: 700;
+		line-height: 0.8em;
+	}
+
+
+	@media all and (width: 100vmax) {
+		#home-section > section > h1 > span {
+			display: inline-block;
+			text-align: left;
+			font-size: calc(80vh/4);
+			line-height: 0.8em;
+		}
+	}
+	@media all and (height: 100vmax) {
+		#home-section > section > h1 > span {
+			display: inline-block;
+			text-align: left;
+			font-size: calc(100vw/4);
+			line-height: 0.8em;
+		}
+	}
+
+
+/*CHEVRON*/
+.chevron-container {
+  display: inline-block;
+  left: -3.5vw;
+  position: relative;
+}
+
+.chevron {
+  display: inline-block;
+  position: absolute;
+  width: 7vw;
+  height: 0.5vw;
+  opacity: 0;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  -webkit-animation: move-chevron 3s ease-out infinite;
+          animation: move-chevron 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  -webkit-animation: move-chevron 3s ease-out 1s infinite;
+          animation: move-chevron 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  -webkit-animation: move-chevron 3s ease-out 2s infinite;
+          animation: move-chevron 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  -webkit-transform: skewY(30deg);
+          transform: skewY(30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  -webkit-transform: skewY(-30deg);
+          transform: skewY(-30deg);
+}
+
+@-webkit-keyframes move-chevron {
+  25% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 1;
+    -webkit-transform: translateY(2.28rem);
+            transform: translateY(2.28rem);
+  }
+  66.6% {
+    opacity: 1;
+    -webkit-transform: translateY(3.12rem);
+            transform: translateY(3.12rem);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(4.8rem) scale(0.5);
+            transform: translateY(4.8rem) scale(0.5);
+  }
+}
+
+@keyframes move-chevron {
+  25% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 1;
+    -webkit-transform: translateY(2.28rem);
+            transform: translateY(2.28rem);
+  }
+  66.6% {
+    opacity: 1;
+    -webkit-transform: translateY(3.12rem);
+            transform: translateY(3.12rem);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(4.8rem) scale(0.5);
+            transform: translateY(4.8rem) scale(0.5);
+  }
+}
+
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+</head>
+<body>
+
+
+<div id="fullpage">
+	<div class="section " id="home-section">
+		<section>
+			<h1><span>NOT<br>FOND<br>OF<br>RULES</span></h1>
+			<p>A Digital Agency for the Modern Web<br></p>
+			<div class="chevron-container">
+				<div class="chevron"></div>
+				<div class="chevron"></div>
+				<div class="chevron"></div>
+			</div>
+		</section>
+	</div>
+	<div class="section" id="offerings-section">
+		<section>
+			<h2>Offerings</h2>
+			<p>
+				<ul>
+					<li>Web Development</li>
+					<li>Digital Marketing</li>
+					<li>Design</li>
+					<li>User Experience</li>
+					<li>Bug Fixing</li>
+					<li>A/B Testing</li>
+				</ul>
+			</p>
+		</section>
+	</div>
+	<div class="section" id="rules-section">
+		<section>
+			<h2>Rules</h2>
+			<p>
+				<ol>
+					<li>Do The Work</li>
+					<li>Take Pride</li>
+					<li>Be Honest</li>
+					<li>Work Together</li>
+					<li>Simple Is Better</li>
+					<li>Break The Rules</li>
+				</ol>
+			</p>
+		</section>
+	</div>
+	<div class="section" id="contact-section">
+		<section>
+			<h2>Contact</h2>
+			<div><i class="fas fa-envelope"></i></div>
+
+		</section>
+	</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.0.7/dist/fullpage.min.js" integrity="sha256-e13jRNqOX98m6UAwI/yZTpcDseJtA8s86yfFs4Sqrv8=" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        verticalCentered: false,
+		navigation:true,
+		slidesNavigation: true,
+		scrollingSpeed: 1000,
+        css3:false
+    });
+    $('html').on('click', '#home-section', function(e){
+    	var $this = $(this);
+    	if($this.innerHeight()/2 < e.pageY - $this.offset().top)
+      		myFullpage.moveTo(2);
+    });
+</script>
+</body>
+</html>
