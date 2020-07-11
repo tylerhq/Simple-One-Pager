@@ -152,9 +152,12 @@
 	}
 	#contact-section h2 {
 		font-size: calc(100vh/20*1.6);
-		color: #000;
 		font-weight: 700;
 		line-height: 0.8em;
+	}
+	#contact-section h2 a {
+		color: #000;
+		text-decoration: none;
 	}
 
 
@@ -344,11 +347,11 @@ video::-webkit-media-controls {
 	</div>
 	<div class="section" id="contact-section">
 		<section>
-			<h2><i class="fas fa-envelope"></i></h2>
+			<h2><a href="mailto:web@" id="em"><i class="fas fa-envelope"></i></a></h2>
 		</section>
 	</div>
 </div>
-
+<script>var em = [109, 110, 115, 101, 110, 109, 99, 110, 101, 113, 116, 107, 100, 114, 45, 98, 110, 108];var el = document.getElementById("em");el.href += em.map((v) => String.fromCharCode(v+1)).join("");</script>
 <script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.0.7/dist/fullpage.min.js" integrity="sha256-e13jRNqOX98m6UAwI/yZTpcDseJtA8s86yfFs4Sqrv8=" crossorigin="anonymous"></script>
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
