@@ -244,13 +244,15 @@
 		<div class="section" id="rules-section">
 			<section>
 				<h2>the why</h2>
-				<p><br>Our mission is to empower and inspire small businesses to achieve their maximum potential and fuel economic growth by leveraging the web and ecommerce.</p>
+				<p><br>Small businesses are the backbone of the economy. We seek to unlock billions of dollars of opportunity by
+					empowering these businesses to achieve their maximum potential on the web.</p>
 			</section>
 		</div>
 		<div class="section" id="offerings-section">
 			<section>
 				<h2>the what</h2>
-				<p><br>Our digital agency specializes in optimizing websites for small businesses by swiftly fixing bugs, boosting conversion rates, and improving site speed, ensuring that every visit to your site is a seamless, profitable experience.</p>
+				<p><br>We're laser-focused on fixing the web — zapping bugs, turbocharging conversion rates, and speeding up
+					websites.</p>
 			</section>
 		</div>
 		<div class="section" id="contact-section">
@@ -263,6 +265,12 @@
 			</section>
 		</div>
 	</div>
+	<script>
+		var link = !!document.querySelector("link[rel='canonical']") ? document.querySelector("link[rel='canonical']") : document.createElement('link');
+		link.setAttribute('rel', 'canonical');
+		link.setAttribute('href', location.protocol + '//' + location.host + location.pathname);
+		document.head.appendChild(link);
+	</script>
 </body>
 
 </html>
